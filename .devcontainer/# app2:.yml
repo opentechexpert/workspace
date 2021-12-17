@@ -1,0 +1,72 @@
+# app2:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     # args:
+  #     #   UPGRADE_PACKAGES: "true"
+  #     #   USE_MOBY: "false"
+  #   ports:
+  #     - "6902:6902"
+  #   environment:
+  #     - VNC_PW=password
+  #     - NO_VNC_PORT=6902
+  #   shm_size: "256m"
+  #   volumes:
+  #     # Forwards the local Docker socket to the container.
+  #     - /var/run/docker.sock:/var/run/docker-host.sock
+  #     # Update this to wherever you want VS Code to mount the folder of your project
+  #     # - ..:/workspace:cached
+  #     - app2:/workspace:cached
+  #     - app2:/home:cached
+
+  #   # Overrides default command so things don't shut down after the process ends.
+  #   # entrypoint: /usr/local/share/docker-init.sh
+  #   command: sleep infinity
+  # app3:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     # args:
+  #     #   UPGRADE_PACKAGES: "true"
+  #     #   USE_MOBY: "false"
+  #   ports:
+  #     - "6903:6903"
+  #   environment:
+  #     - VNC_PW=password
+  #     - NO_VNC_PORT=6903
+  #   shm_size: "256m"
+  #   volumes:
+  #     # Forwards the local Docker socket to the container.
+  #     - /var/run/docker.sock:/var/run/docker-host.sock
+  #     # Update this to wherever you want VS Code to mount the folder of your project
+  #     # - ..:/workspace:cached
+  #     - app3:/workspace:cached
+  #     - app3:/home:cached
+
+  #   # Overrides default command so things don't shut down after the process ends.
+  #   # entrypoint: /usr/local/share/docker-init.sh
+  #   command: sleep infinity
+  # app4:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     # args:
+  #     #   UPGRADE_PACKAGES: "true"
+  #     #   USE_MOBY: "false"
+  #   ports:
+  #     - "6904:6904"
+  #   environment:
+  #     - VNC_PW=password
+  #     - NO_VNC_PORT=6904
+  #   shm_size: "256m"
+  #   volumes:
+  #     # Forwards the local Docker socket to the container.
+  #     - /var/run/docker.sock:/var/run/docker-host.sock
+  #     # Update this to wherever you want VS Code to mount the folder of your project
+  #     # - ..:/workspace:cached
+  #     - app4:/workspace:cached
+  #     - app4:/home:cached
+
+  #   # Overrides default command so things don't shut down after the process ends.
+  #   # entrypoint: /usr/local/share/docker-init.sh
+  #   command: sleep infinity
