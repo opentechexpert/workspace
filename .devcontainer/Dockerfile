@@ -171,3 +171,5 @@ RUN wget -q https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd
 # Chrome Remote Desktop stuff
 RUN sed -i "s/\(chrome-remote-desktop.*\)/\1${USER}/g" /etc/group
 ENV CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1920x1080
+
+RUN bash -c ‘echo “exec /etc/X11/Xsession /usr/bin/xfce4-session” > /etc/chrome-remote-desktop-session’
