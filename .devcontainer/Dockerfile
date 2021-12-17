@@ -163,3 +163,11 @@ USER 1000
 
 RUN git config --global user.name "OpenTech"
 RUN git config --global user.email "github@opentechexpert.com"
+
+RUN wget -q https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb && \
+    apt install -y ./chrome-remote-desktop_current_amd64.deb && \
+    rm chrome-remote-desktop_current_amd64.deb
+
+# Chrome Remote Desktop stuff
+RUN sed -i "s/\(chrome-remote-desktop.*\)/\1${USER}/g" /etc/group
+ENV CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES=1920x1080
